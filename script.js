@@ -38,13 +38,16 @@ function loadData() {
 }
 
 function resetData() {
-  localStorage.removeItem("callBreakData");
-  const editableElements = document.querySelectorAll(
-    '[contenteditable="true"]'
-  );
-  editableElements.forEach((element) => {
-    element.innerText = "";
-  });
+  const isConfirmed = confirm("Are you sure you want to reset the game?");
+  if (isConfirmed) {
+    localStorage.removeItem("callBreakData");
+    const editableElements = document.querySelectorAll(
+      '[contenteditable="true"]'
+    );
+    editableElements.forEach((element) => {
+      element.innerText = "";
+    });
+  }
 }
 
 function endGame() {
@@ -70,27 +73,33 @@ function endGame() {
     }
   }
 
-  const resultPage = document.createElement("div");
-  resultPage.innerHTML = "<h2>Results:</h2>";
+  const modal = document.createElement("div");
+  modal.classList.add("modal");
+
+  const modalContent = document.createElement("div");
+  modalContent.classList.add("modal-content");
+
+  modalContent.innerHTML = "<h2>Results:</h2>";
 
   for (let playerId in totalPoints) {
-    resultPage.innerHTML += `<p>${data[playerId].name}: ${totalPoints[playerId]} points</p>`;
+    modalContent.innerHTML += `<p>${data[playerId].name}: ${totalPoints[playerId]} points</p>`;
   }
 
   const winner = Object.keys(totalPoints).reduce((a, b) =>
     totalPoints[a] > totalPoints[b] ? a : b
   );
 
-  resultPage.innerHTML += `<h3>Winner: ${data[winner].name}</h3>`;
+  modalContent.innerHTML += `<h3>Winner: <span class="winner-name">${data[winner].name}</span></h3>`;
 
   const closeButton = document.createElement("button");
   closeButton.textContent = "Close";
   closeButton.addEventListener("click", () => {
-    document.body.removeChild(resultPage);
+    document.body.removeChild(modal);
   });
 
-  resultPage.appendChild(closeButton);
-  document.body.appendChild(resultPage);
+  modalContent.appendChild(closeButton);
+  modal.appendChild(modalContent);
+  document.body.appendChild(modal);
 }
 
 document.addEventListener("DOMContentLoaded", loadData);
