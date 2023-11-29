@@ -30,7 +30,7 @@ body {
   background-color: #7c00c0;
   color: #fff;
   padding: 5px 8px;
-  margin: 10px 10px;
+  margin: 20px 10px 0px 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -98,15 +98,15 @@ td[contenteditable="true"] {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: #00000080;
   z-index: 1;
 }
 
 .modal-content {
   background: #fff;
-  padding: 40px;
+  padding: 5px 40px 20px 40px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px #00000033;
   text-align: center;
 }
 
@@ -118,7 +118,6 @@ td[contenteditable="true"] {
   background-color: #7c00c0;
   color: #fff;
   padding: 10px 20px;
-  margin-top: 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
