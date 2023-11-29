@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call Break Card Game</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Call Break Card Game</h1>
+      <table id="scoreTable">
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="player1">
+            <td
+              contenteditable="true"
+              oninput="updateData('player1', 'name', this)"
+              onkeypress="handleKeyPress(event, 'player2', 'name')"
+            ></td>
+            <td
+              contenteditable="true"
+              oninput="updateData('player1', 'points', this)"
+              onkeypress="handleKeyPress(event, 'player2', 'points')"
+            ></td>
+          </tr>
+          <tr id="player2">
+            <td
+              contenteditable="true"
+              oninput="updateData('player2', 'name', this)"
+              onkeypress="handleKeyPress(event, 'player3', 'name')"
+            ></td>
+            <td
+              contenteditable="true"
+              oninput="updateData('player2', 'points', this)"
+              onkeypress="handleKeyPress(event, 'player3', 'points')"
+            ></td>
+          </tr>
+          <tr id="player3">
+            <td
+              contenteditable="true"
+              oninput="updateData('player3', 'name', this)"
+              onkeypress="handleKeyPress(event, 'player4', 'name')"
+            ></td>
+            <td
+              contenteditable="true"
+              oninput="updateData('player3', 'points', this)"
+              onkeypress="handleKeyPress(event, 'player4', 'points')"
+            ></td>
+          </tr>
+          <tr id="player4">
+            <td
+              contenteditable="true"
+              oninput="updateData('player4', 'name', this)"
+              onkeypress="handleKeyPress(event, 'player1', 'name')"
+            ></td>
+            <td
+              contenteditable="true"
+              oninput="updateData('player4', 'points', this)"
+              onkeypress="handleKeyPress(event, 'player1', 'points')"
+            ></td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <button onclick="resetData()">Reset Data</button>
+        <button onclick="endGame()">End Battle</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span class="heading-gradiant"> &copy; Made with ❤️ by Subhajit </span>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

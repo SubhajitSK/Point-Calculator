@@ -1,0 +1,74 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #b5fee8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  text-align: center;
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container button {
+  background-color: #7c00c0;
+  color: #fff;
+  padding: 5px 8px;
+  margin: 10px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.footer {
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+.heading-gradiant {
+  background: rgb(105, 234, 203);
+  background: linear-gradient(90deg, #0c008e 0%, #8f0000 50%, #9a00dc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  text-align: center;
+  color: #000000;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #808080;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td[contenteditable="true"] {
+  outline: none;
+}
