@@ -36,7 +36,3 @@ If you have suggestions for improvements or find any issues, feel free to contri
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Special thanks to [Subhajit Karmakar](https://github.com/subhajitsk) for developing PointCal.
